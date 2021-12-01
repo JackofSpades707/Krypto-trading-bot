@@ -1,7 +1,7 @@
 //! \file
 //! \brief Exchange API integrations.
 
-namespace ₿ {
+namespace \u20BF {
   enum class Connectivity: unsigned int { Disconnected, Connected };
   enum class       Status: unsigned int { Waiting, Working, Terminated };
   enum class         Side: unsigned int { Bid, Ask };
@@ -628,11 +628,11 @@ namespace ₿ {
     public:
       GwBinance()
       {
-        http   = "https://api.binance.com";
-        ws     = "wss://stream.binance.com:9443/ws";
+        http   = "https://api.binance.us";
+        ws     = "wss://stream.binance.us:9443/ws";
         randId = Random::uuid36Id;
-        webMarket = "https://www.binance.com/en/trade/";
-        webOrders = "https://www.binance.com/en/my/orders/exchange/tradeorder";
+        webMarket = "https://www.binance.us/en/trade/";
+        webOrders = "https://www.binance.us/en/my/orders/exchange/tradeorder";
       };
       string web(const string &base, const string &quote) const {
         return webMarket + base + "_" + quote + "?layout=pro";
